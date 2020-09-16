@@ -12,4 +12,4 @@ build:
     - docker login --username ${CI_REGISTRY_USER} --password ${CI_REGISTRY_PASSWORD} https://${CI_REGISTRY} #/${CI_PROJECT_NAME}
     - cd ${CI_PROJECT_DIR}
     - docker build -t ${CI_PROJECT_NAME}/${CI_PROJECT_NAME} .
-     - docker push ${CI_PROJECT_NAME}/${CI_PROJECT_NAME}
+    - docker push ${CI_PROJECT_NAME}/${CI_PROJECT_NAME}
