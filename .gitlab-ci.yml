@@ -13,4 +13,5 @@ build:
     - cd ${CI_PROJECT_DIR}
     - docker build -t ${CI_PROJECT_NAME}/${CI_PROJECT_NAME} .
     - docker tag ${CI_PROJECT_NAME}/${CI_PROJECT_NAME} ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA}
+    - docker image ls
     - docker push ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA}
